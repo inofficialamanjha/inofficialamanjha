@@ -26,7 +26,7 @@ Also, having early entrepreneurial experience I have participated in building an
 
 - ✏️ **Content Writing** comes as subset of our Social Media Marketing Skills. We have successfully engaged our target audience ( College Youth ) in four of our campaigns which oversaw **3K+ Registrations** and **60K+ Reach**. Our [**Skillzera**](http://skillzera.tech/) community hosts around 1000+ College students from [**Delhi Technological University**](http://www.dtu.ac.in/) actively engaging them in Coding Camps and Upskill training Sessions.
 
-To have a Look at our complete Portfolio visit hit this [**Link**](https://github.com/inofficialamanjha/Marketing-Designing-Development).
+To have a Look at our complete Portfolio visit hit this [**Link**](https://github.com/inofficialamanjha/inofficialamanjha/tree/main/Portfolio).
 
 # Contact Details
 
