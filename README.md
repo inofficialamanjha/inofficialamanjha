@@ -1,8 +1,6 @@
-# HEY THERE
-
 I am a Professional Full Stack Software Developer and offer services ranging from Idea generation & research, User Interface & User Experience ( UI/UX ), Frontend Development, Backend Development and Deployment Operations.
 
-How can I Help You :
+# How can I Help You
 
 - 📐 **Manage and Handle** Tech, Marketing & Operations **Teams and Hire Interns from College** to help Execute your Idea. I believe that college students if trained and guided well, can perform as much good as any other professional. Over the Past I have recruited more than **500+** College Students for various projects in various departments. I have also won the [**Indian Achievers Award 2020**](https://www.iafindia.com/mr-aman-jha/) in recognition for outstanding Professional Achievement & Contribution in Nation Building.
 
