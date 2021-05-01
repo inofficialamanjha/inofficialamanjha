@@ -1,3 +1,6 @@
+![AMAN JHA](https://user-images.githubusercontent.com/75173703/116773721-c13f2000-aa74-11eb-8fc9-8ec848d52106.png)
+
+
 I am a Professional Full Stack Software Developer and offer services ranging from Idea generation & research, User Interface & User Experience ( UI/UX ), Frontend Development, Backend Development and Deployment Operations.
 
 Also, having early entrepreneurial experience I have participated in building and execution of 3 Startup Ventures ( One of them valued at 15 Lakhs at 10% Stake ), majorly looking our Marketing and Technology Departments.
