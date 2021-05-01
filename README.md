@@ -22,7 +22,7 @@ Also, having early entrepreneurial experience I have participated in building an
 
 To have a Look at our complete Portfolio visit hit this [**Link**](https://github.com/inofficialamanjha/Marketing-Designing-Development).
 
-# CONTACT DETAILS
+# Contact Details
 
 [**Xero Technologies Website**](https://xeroed.tech/)
 [**WhatsApp Business**](https://api.whatsapp.com/message/VQX4YB3VKS3RE1)
