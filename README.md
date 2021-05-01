@@ -14,7 +14,7 @@ Also, having early entrepreneurial experience I have participated in building an
 
 - ✏️ **Content Writing**
 
-- 🎨 **Design** various Graphic Elements such as Logos, Icons, Posters, Presentations, Letterheads and Short High quality animated videos and advertisements. Our Graphic Designing operations in the past have generated a reach of **3.21 Lakhs+** along with our Videos experiencing a watchtime of **1.38K+ Minutes**& **2.08K+ Views**.
+- 🎨 **Design** various Graphic Elements such as Logos, Icons, Posters, Presentations, Letterheads and Short High quality animated videos and advertisements. Our Graphic Designing operations in the past have generated a reach of **3.21 Lakhs+** along with our Videos experiencing a watchtime of **1.38K+ Minutes** & **2.08K+ Views**.
 
 
 To have a Look at our complete Portfolio visit hit this [**Link**](https://github.com/inofficialamanjha/Marketing-Designing-Development).
