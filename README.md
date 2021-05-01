@@ -14,7 +14,7 @@ Also, having early entrepreneurial experience I have participated in building an
 
 # How can I Help You
 
-- 📐 **Manage and Handle* Tech, Marketing & Operations **Teams and Hire Interns from College** to help Execute your Idea. I believe that college students if trained and guided well, can perform as much good as any other professional. Over the Past I have recruited more than **500+** College Students for various projects in various departments. I have also won the [**Indian Achievers Award 2020**](https://www.iafindia.com/mr-aman-jha/) in recognition for outstanding Professional Achievement & Contribution in Nation Building.
+- 📐 **Manage and Handle** Tech, Marketing & Operations **Teams and Hire Interns from College** to help Execute your Idea. I believe that college students if trained and guided well, can perform as much good as any other professional. Over the Past I have recruited more than **500+** College Students for various projects in various departments. I have also won the [**Indian Achievers Award 2020**](https://www.iafindia.com/mr-aman-jha/) in recognition for outstanding Professional Achievement & Contribution in Nation Building.
 
 - 🌍 Develop **Frontend Website** along with designing its **UI/UX** ( User Interface and Experience ) according to you and your customer needs. Over the Past we have created and Managed Website for 5 Different Startups.
 
