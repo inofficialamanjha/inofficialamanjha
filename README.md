@@ -1,6 +1,8 @@
 ![AMAN JHA](https://user-images.githubusercontent.com/75173703/116773721-c13f2000-aa74-11eb-8fc9-8ec848d52106.png)
 
-<a href="#" class="button big">Create Project</a>
+[![Aman Jha - Website](https://img.shields.io/badge/Aman_Jha-Website-000000?logo=webflow&logoColor=ffffff)](https://www.iafindia.com/mr-aman-jha/)    [![Xero Tech - Website](https://img.shields.io/badge/Xero_Tech-Website-000000?logo=xero&logoColor=ffffff)](https://xeroed.tech/) [![Skillzera - Website](https://img.shields.io/badge/Skillzera-Website-000000?logo=socket.io&logoColor=ffffff)](http://skillzera.tech/)
+
+<!--- Label Buttons Generated Using : https://michaelcurrin.github.io/badge-generator/#/generic || https://github.com/MichaelCurrin/badge-generator --->
 
 I am a Professional Full Stack Software Developer and offer services ranging from Idea generation & research, User Interface & User Experience ( UI/UX ), Frontend Development, Backend Development and Deployment Operations.
 
