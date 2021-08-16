@@ -1,6 +1,6 @@
 ![AMAN JHA](https://user-images.githubusercontent.com/75173703/125692888-7c5ec438-02b4-4d03-85d2-e85de5ea633c.png)
 
-[![Aman Jha - Website](https://img.shields.io/badge/Aman_Jha-Website-000000?logo=webflow&logoColor=ffffff)](https://www.iafindia.com/mr-aman-jha/)   [![Xero Tech - Website](https://img.shields.io/badge/Xero_Tech-Website-000000?logo=xero&logoColor=ffffff)](https://xeroed.tech/)         [![Skillzera - Website](https://img.shields.io/badge/Skillzera-Website-000000?logo=socket.io&logoColor=ffffff)](http://skillzera.tech/)
+[![Aman Jha - Website](https://img.shields.io/badge/Aman_Jha-Website-000000?logo=webflow&logoColor=ffffff)](https://www.iafindia.com/mr-aman-jha/)   [![Xero Tech - Website](https://img.shields.io/badge/Xero_Tech-Website-000000?logo=xero&logoColor=ffffff)](https://xeroed.tech/)         [![Skillzera - Website](https://img.shields.io/badge/Skillzera-Website-000000?logo=socket.io&logoColor=ffffff)](http://skillzera.tech/)     [![LinkedIn - Aman Jha](https://img.shields.io/badge/Portfolio-Visit-ffffff?logo=linkedin&logoColor=000000)](https://www.linkedin.com/in/amanjhaofficial/)  
 
 
 [![Portfolio - Visit](https://img.shields.io/badge/Portfolio-Visit-ffffff?logo=linkedin&logoColor=000000)](https://github.com/inofficialamanjha/inofficialamanjha/tree/main/Portfolio) [![Whatsapp - Contact](https://img.shields.io/badge/Whatsapp-Contact-ffffff?logo=whatsapp&logoColor=000000)](https://api.whatsapp.com/message/VQX4YB3VKS3RE1) 
