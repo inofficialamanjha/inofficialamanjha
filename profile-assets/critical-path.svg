@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Aman Jha</title>
+  <desc id="desc">Backend systems, cloud platforms, and AI agents, illustrated as a distributed trace.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#101d30"/>
+      <stop offset="1" stop-color="#08111e"/>
+    </linearGradient>
+    <linearGradient id="path">
+      <stop stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="1198" height="358" rx="20" fill="url(#bg)" stroke="#334155"/>
+  <g fill="#94a3b8" font-family="Consolas, monospace" font-size="16" letter-spacing="3">
+    <text x="60" y="76">SOFTWARE ENGINEER</text>
+  </g>
+  <text x="56" y="177" fill="#f1f5f9" font-family="Georgia, serif" font-size="82">Aman Jha</text>
+  <path d="M60 211H510" stroke="#334155"/>
+  <g fill="#cbd5e1" font-family="Consolas, monospace" font-size="21">
+    <text x="60" y="252">Backend systems</text>
+    <text x="60" y="287">Cloud platforms / AI agents</text>
+  </g>
+  <g stroke="#26384f" stroke-width="1">
+    <path d="M650 64V304M730 64V304M810 64V304M890 64V304M970 64V304M1050 64V304M1130 64V304"/>
+  </g>
+  <g fill="#213952">
+    <rect x="650" y="91" width="480" height="16" rx="8"/>
+    <rect x="685" y="147" width="215" height="16" rx="8"/>
+    <rect x="800" y="203" width="230" height="16" rx="8"/>
+    <rect x="950" y="259" width="180" height="16" rx="8"/>
+  </g>
+  <path d="M650 99H685V155H800V211H950V267H1130" fill="none" stroke="url(#path)" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#cbd5e1" font-family="Consolas, monospace" font-size="16">
+    <text x="685" y="137">request</text>
+    <text x="800" y="193">orchestrate</text>
+    <text x="950" y="249">execute</text>
+  </g>
+  <circle cx="1130" cy="267" r="6" fill="#fbbf24"/>
+</svg>

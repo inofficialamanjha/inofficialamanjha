@@ -1,0 +1,14 @@
+# Public profile repository: everything is private unless listed here.
+/*
+!/.gitignore
+!/README.md
+!/profile-assets/
+/profile-assets/*
+!/profile-assets/critical-path.svg
+!/LinkedIn/
+/LinkedIn/*
+!/LinkedIn/Research/
+/LinkedIn/Research/*
+!/LinkedIn/Research/About-and-Headline.md
+!/LinkedIn/Research/Skills-and-Discoverability.md
+!/Portfolio/
