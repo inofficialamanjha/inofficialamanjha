@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real-time Vehicle Detection, Classification &amp; Tracing | LinkedIn Publication</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #f3f5f8; --card: #fff; --ink: #17283b; --muted: #526379; --line: #dce3eb; --accent: #0a66c2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; line-height: 1.65; }
+    main { max-width: 820px; margin: 40px auto; padding: 0 20px; }
+    h1 { margin-bottom: 8px; font-size: clamp(26px, 5vw, 36px); letter-spacing: -.03em; }
+    h2 { font-size: 19px; }
+    .subtitle, #status, #count { color: var(--muted); }
+    .card { margin: 24px 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 5vw, 40px); }
+    #description { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 17px; }
+    .tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    button { border: 0; border-radius: 9px; padding: 12px 20px; background: #0a66c2; color: white; font: inherit; font-weight: 650; cursor: pointer; }
+    button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+    #status, #count { font-size: 14px; }
+    a { color: var(--accent); overflow-wrap: anywhere; }
+    summary { cursor: pointer; font-weight: 650; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #101923; --card: #182534; --ink: #edf3fa; --muted: #b6c4d5; --line: #33475e; --accent: #82bfff; } }
+    @media (max-width: 480px) { main { margin: 24px auto; } #description { font-size: 16px; } }
+    @media print { .tools, details { display: none; } body { background: white; color: black; } .card { border: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Real-time Vehicle Detection, Classification &amp; Tracing Using State-Of-The-Art Dataset</h1>
+    <p class="subtitle">LinkedIn Publications · Conference paper</p>
+    <section class="card" aria-labelledby="fields-heading">
+      <h2 id="fields-heading">Publication fields</h2>
+      <p><strong>Title:</strong> Real-time Vehicle Detection, Classification &amp; Tracing Using State-Of-The-Art Dataset</p>
+      <p><strong>Publisher:</strong> IEEE</p>
+      <p><strong>Publication date:</strong> May 2022 <span class="subtitle">(Crossref date: May 27, 2022)</span></p>
+      <p><strong>Venue:</strong> 2022 3rd International Conference for Emerging Technology (INCET)</p>
+      <p><strong>Authors, in publication order:</strong> Aadhar Dutta; Aman Jha; Rajat Rao; Dinesh Kumar Vishwakarma</p>
+      <p><strong>Pages:</strong> 1–8</p>
+      <p><strong>DOI:</strong> <a href="https://doi.org/10.1109/INCET54531.2022.9824516" target="_blank" rel="noopener noreferrer">10.1109/INCET54531.2022.9824516</a></p>
+      <p><strong>Publication URL:</strong> <a href="https://ieeexplore.ieee.org/document/9824516" target="_blank" rel="noopener noreferrer">https://ieeexplore.ieee.org/document/9824516</a></p>
+    </section>
+    <section class="card" aria-label="Publication description">
+      <div id="description">Co-authored a conference paper on real-time vehicle detection, classification and tracking, published in the IEEE INCET 2022 proceedings.</div>
+    </section>
+    <div class="tools">
+      <button id="copy" type="button">Copy publication description</button>
+      <span id="count"></span>
+      <span id="status" role="status" aria-live="polite"></span>
+    </div>
+    <section class="card" id="media" aria-labelledby="media-heading">
+      <h2 id="media-heading">Suggested LinkedIn media</h2>
+      <p><a href="https://ieeexplore.ieee.org/document/9824516" target="_blank" rel="noopener noreferrer">IEEE Xplore publication page</a></p>
+      <p><strong>Title:</strong> Real-time Vehicle Detection, Classification &amp; Tracing Using State-Of-The-Art Dataset<br><strong>Caption:</strong> Conference paper published in the IEEE INCET 2022 proceedings.</p>
+    </section>
+    <details class="card">
+      <summary>Public sources</summary>
+      <p><a href="https://api.crossref.org/works/10.1109/INCET54531.2022.9824516" target="_blank" rel="noopener noreferrer">Crossref record</a> · <a href="https://ieeexplore.ieee.org/document/9824516" target="_blank" rel="noopener noreferrer">IEEE Xplore publication page</a></p>
+      <p>The publication metadata identifies the title, authors, venue, pages, DOI, and May 27, 2022 publication date. No performance measurements or individual implementation claims are made here.</p>
+    </details>
+  </main>
+  <script>
+    const text = document.getElementById("description").textContent.trim();
+    const status = document.getElementById("status");
+    const copyButton = document.getElementById("copy");
+    document.getElementById("count").textContent = `${text.length.toLocaleString()} characters`;
+    function copyFallback() {
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      field.setSelectionRange(0, field.value.length);
+      let copied = false;
+      try { copied = document.execCommand("copy"); }
+      finally { field.remove(); copyButton.focus(); }
+      if (!copied) throw new Error("Copy unavailable");
+    }
+    copyButton.addEventListener("click", async () => {
+      try {
+        try {
+          if (!navigator.clipboard) throw new Error("Clipboard unavailable");
+          await navigator.clipboard.writeText(text);
+        } catch { copyFallback(); }
+        status.textContent = "Copied — ready to paste into LinkedIn.";
+      } catch { status.textContent = "Select the description above and copy it manually."; }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page-RAG | LinkedIn Project</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #f3f5f8; --card: #fff; --ink: #17283b; --muted: #526379; --line: #dce3eb; --accent: #0a66c2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; line-height: 1.65; }
+    main { max-width: 820px; margin: 40px auto; padding: 0 20px; }
+    h1 { margin-bottom: 8px; font-size: clamp(26px, 5vw, 36px); letter-spacing: -.03em; }
+    h2 { font-size: 19px; }
+    .subtitle, #status, #count { color: var(--muted); }
+    .card { margin: 24px 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 5vw, 40px); }
+    #description { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 17px; }
+    .tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    button { border: 0; border-radius: 9px; padding: 12px 20px; background: #0a66c2; color: white; font: inherit; font-weight: 650; cursor: pointer; }
+    button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+    #status, #count { font-size: 14px; }
+    a { color: var(--accent); overflow-wrap: anywhere; }
+    summary { cursor: pointer; font-weight: 650; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #101923; --card: #182534; --ink: #edf3fa; --muted: #b6c4d5; --line: #33475e; --accent: #82bfff; } }
+    @media (max-width: 480px) { main { margin: 24px auto; } #description { font-size: 16px; } }
+    @media print { .tools, details { display: none; } body { background: white; color: black; } .card { border: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Page-RAG</h1>
+    <p class="subtitle">LinkedIn Projects · Personal software project</p>
+    <section class="card" aria-labelledby="fields-heading">
+      <h2 id="fields-heading">Project fields</h2>
+      <p><strong>Project name:</strong> Page-RAG — Document-Grounded FAQ Assistant</p>
+      <p><strong>Project URL:</strong> <a href="https://github.com/inofficialamanjha/Page-RAG" target="_blank" rel="noopener noreferrer">https://github.com/inofficialamanjha/Page-RAG</a></p>
+    </section>
+    <section class="card" aria-label="Project description">
+      <div id="description">Built a Python-based product FAQ assistant that retrieves context from PDF documents and uses Azure OpenAI to generate document-grounded responses.
+
+📄 Document ingestion — Implemented PDF parsing, page-aware content processing, chunking, and preprocessing to turn source documents into searchable representations.
+
+🔎 Retrieval and generation — Connected query generation, vector search, page-level result deduplication, and response generation in a modular RAG pipeline.
+
+💾 Persistent document recall — Used ChromaDB to retain indexed content across sessions, with command-line controls for adding files, saving the index, and resetting stored data.
+
+🔌 Backend interfaces — Exposed document ingestion, search, and question-answering through Flask endpoints, including streamed responses, alongside an interactive command-line interface.
+
+Technologies: Python, Azure OpenAI, ChromaDB, Flask, and retrieval-augmented generation.</div>
+    </section>
+    <div class="tools">
+      <button id="copy" type="button">Copy project description</button>
+      <span id="count"></span>
+      <span id="status" role="status" aria-live="polite"></span>
+    </div>
+    <section class="card" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills to associate with this project</h2>
+      <p>Python · Retrieval-Augmented Generation · Azure OpenAI · Vector Databases · Flask</p>
+    </section>
+    <section class="card" id="media" aria-labelledby="media-heading">
+      <h2 id="media-heading">Suggested LinkedIn media</h2>
+      <p><a href="https://github.com/inofficialamanjha/Page-RAG" target="_blank" rel="noopener noreferrer">Page-RAG — source code and setup guide</a></p>
+      <p><strong>Title:</strong> Page-RAG — document-grounded FAQ assistant<br><strong>Caption:</strong> Python RAG project combining PDF ingestion, persistent ChromaDB retrieval, Azure OpenAI response generation, and Flask APIs.</p>
+      <p>The public repository contains the project source code and setup guide.</p>
+    </section>
+    <details class="card">
+      <summary>Public sources</summary>
+      <p>Persistent recall refers to the document index, not conversation memory. No performance, accuracy, or production-readiness measurements are claimed.</p>
+      <ul>
+        <li><a href="https://github.com/inofficialamanjha/Page-RAG/blob/5111bd4d9535eaf986a4a2bba42454256e8bc2fe/ReadMe.md">README and project scope</a></li>
+        <li><a href="https://github.com/inofficialamanjha/Page-RAG/blob/5111bd4d9535eaf986a4a2bba42454256e8bc2fe/backend/recall/recall.py">Retrieval and response-generation flow</a></li>
+        <li><a href="https://github.com/inofficialamanjha/Page-RAG/blob/5111bd4d9535eaf986a4a2bba42454256e8bc2fe/controller/flask_app.py">Flask interfaces and streaming</a></li>
+      </ul>
+    </details>
+  </main>
+  <script>
+    const text = document.getElementById("description").textContent.trim();
+    const status = document.getElementById("status");
+    document.getElementById("count").textContent = `${text.length.toLocaleString()} characters`;
+    function copyFallback() {
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      let copied = false;
+      try { copied = document.execCommand("copy"); }
+      finally { field.remove(); document.getElementById("copy").focus(); }
+      if (!copied) throw new Error("Copy unavailable");
+    }
+    document.getElementById("copy").addEventListener("click", async () => {
+      try {
+        try {
+          if (!navigator.clipboard) throw new Error("Clipboard unavailable");
+          await navigator.clipboard.writeText(text);
+        } catch { copyFallback(); }
+        status.textContent = "Copied — ready to paste into LinkedIn.";
+      } catch { status.textContent = "Select the description above and copy it manually."; }
+    });
+  </script>
+</body>
+</html>

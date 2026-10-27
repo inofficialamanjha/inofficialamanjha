@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Microsoft Copilot | LinkedIn Experience</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #f3f5f8; --card: #fff; --ink: #17283b; --muted: #526379; --line: #dce3eb; --accent: #0a66c2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; line-height: 1.65; }
+    main { max-width: 820px; margin: 40px auto; padding: 0 20px; }
+    h1 { margin-bottom: 8px; font-size: clamp(26px, 5vw, 36px); letter-spacing: -.03em; }
+    h2 { font-size: 19px; }
+    .subtitle, .note, #status, #count { color: var(--muted); }
+    .card { margin: 24px 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 5vw, 40px); }
+    #description { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 17px; }
+    .tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    button { border: 0; border-radius: 9px; padding: 12px 20px; background: var(--accent); color: white; font: inherit; font-weight: 650; cursor: pointer; }
+    button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+    .note, #status, #count { font-size: 14px; }
+    a { color: var(--accent); }
+    summary { cursor: pointer; font-weight: 650; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #101923; --card: #182534; --ink: #edf3fa; --muted: #b6c4d5; --line: #33475e; --accent: #82bfff; }
+      button { background: #096acb; }
+    }
+    @media (max-width: 480px) { main { margin: 24px auto; } #description { font-size: 16px; } }
+    @media print { .tools, details, .note { display: none; } body { background: white; color: black; } .card { border: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Microsoft AI · Copilot</h1>
+    <p>Copy the description below into your LinkedIn Experience entry.</p>
+    <section class="card" aria-label="Experience description">
+      <div id="description">Built mobile AI experiences for Microsoft Copilot, combining Android engineering with hands-on AI prototyping.
+
+📱 Copilot Vision — Contributed Android engineering across camera interfaces, real-time streaming, connection reliability, and accessibility for Copilot Vision on mobile.
+
+🤝 Motorola · moto ai — Contributed Android engineering to Microsoft Copilot integration work with Motorola’s moto ai.
+
+🔎 On-device AI — Built Android data-processing and indexing components for AI prototypes.
+
+🎙️ Speech prototypes — Built Android speech-processing prototypes, including on-device speech-recognition inference.
+
+🌐 AI orchestration — Built prototypes for interpreting intent and coordinating actions.
+
+🧪 Quality engineering — Contributed to automated validation and evaluation tooling for AI experiences, and mentored engineers.
+
+💡 Multimodal prototypes — Explored image-and-text retrieval and creative-input concepts.</div>
+    </section>
+    <div class="tools">
+      <button id="copy" type="button">Copy role description</button>
+      <span id="count"></span>
+      <span id="status" role="status" aria-live="polite"></span>
+    </div>
+    <section class="card" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills to associate with this role</h2>
+      <p>Android Development · Kotlin · Java · Python · WorkManager · Room · Generative AI · Speech Recognition · Retrieval-Augmented Generation · ONNX Runtime · WebSocket · AI Evaluation</p>
+    </section>
+    <section class="card" id="media" aria-labelledby="media-heading">
+      <h2 id="media-heading">Suggested LinkedIn media</h2>
+      <ol>
+        <li>
+          <p><a href="https://blogs.microsoft.com/blog/2025/04/04/your-ai-companion/" target="_blank" rel="noopener noreferrer">Microsoft: Your AI companion — Copilot Vision on mobile</a> · April 4, 2025</p>
+          <p><strong>Title:</strong> Copilot Vision on Android and iOS<br><strong>Caption:</strong> Microsoft’s official mobile Vision announcement, providing product context for my Android engineering work.</p>
+        </li>
+        <li>
+          <p><a href="https://motorolanews.com/moto-ai-launches-new-experiences-and-partnerships-with-ai-leaders-giving-users-choice/" target="_blank" rel="noopener noreferrer">Motorola: moto ai experiences and AI partnerships</a> · April 24, 2025</p>
+          <p><strong>Title:</strong> Microsoft Copilot integration with Motorola moto ai<br><strong>Caption:</strong> Motorola’s official announcement of direct access to Microsoft Copilot through moto ai.</p>
+        </li>
+        <li>
+          <p><a href="https://motorolanews.com/motorola-unveils-microsoft-copilot-vision-built-into-moto-ai-turning-ones-camera-into-a-gateway-for-real-time-discovery/" target="_blank" rel="noopener noreferrer">Motorola: Copilot Vision built into moto ai</a> · August 6, 2025</p>
+          <p><strong>Title:</strong> Copilot Vision arrives within Motorola moto ai<br><strong>Caption:</strong> Official product coverage of Copilot Vision integration on supported Motorola devices.</p>
+        </li>
+      </ol>
+      <p>Official announcements provide public product context; they do not describe individual contributions.</p>
+    </section>
+  </main>
+  <script>
+    const text = document.getElementById("description").textContent.trim();
+    const status = document.getElementById("status");
+    document.getElementById("count").textContent = `${text.length.toLocaleString()} characters`;
+    function copyFallback() {
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      let copied = false;
+      try {
+        copied = document.execCommand("copy");
+      } finally {
+        field.remove();
+        document.getElementById("copy").focus();
+      }
+      if (!copied) throw new Error("Copy unavailable");
+    }
+    document.getElementById("copy").addEventListener("click", async () => {
+      try {
+        try {
+          if (!navigator.clipboard) throw new Error("Clipboard unavailable");
+          await navigator.clipboard.writeText(text);
+        } catch {
+          copyFallback();
+        }
+        status.textContent = "Copied — ready to paste into LinkedIn.";
+      } catch {
+        status.textContent = "Select the description above and copy it manually.";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Balaji Infratech Software Development Engineer Internship | LinkedIn Experience</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #f3f5f8; --card: #fff; --ink: #17283b; --muted: #526379; --line: #dce3eb; --accent: #0a66c2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; line-height: 1.65; }
+    main { max-width: 820px; margin: 40px auto; padding: 0 20px; }
+    h1 { margin-bottom: 8px; font-size: clamp(26px, 5vw, 36px); letter-spacing: -.03em; }
+    h2 { font-size: 19px; }
+    .subtitle, .note, #status, #count { color: var(--muted); }
+    .card { margin: 24px 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 5vw, 40px); }
+    #description { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 17px; }
+    .tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    button { border: 0; border-radius: 9px; padding: 12px 20px; background: var(--accent); color: white; font: inherit; font-weight: 650; cursor: pointer; }
+    button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+    .note, #status, #count { font-size: 14px; }
+    a { color: var(--accent); }
+    summary { cursor: pointer; font-weight: 650; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #101923; --card: #182534; --ink: #edf3fa; --muted: #b6c4d5; --line: #33475e; --accent: #82bfff; }
+      button { background: #096acb; }
+    }
+    @media (max-width: 480px) { main { margin: 24px auto; } #description { font-size: 16px; } }
+    @media print { .tools, details, .note { display: none; } body { background: white; color: black; } .card { border: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Software Development Engineer Intern · Balaji Infratech</h1>
+    <p class="subtitle">December 2020 – March 2021 · 4 months · New Delhi, India</p>
+    <p>Copy the description below into your LinkedIn Experience entry.</p>
+    <section class="card" aria-label="Experience description">
+      <div id="description">Built traffic-classification and counting software that automated manual analysis of Indian roadway video across daytime, nighttime, low-light, occlusion, fast-traffic, and non-state-of-the-art camera conditions.
+
+🚘 Dataset development — Led and mentored 30+ software engineering and research interns contributing to annotation, experiments, tracking, and application development; guided labeling for 20 India-specific vehicle classes.
+
+🌙 Computer vision research — Directed team evaluation of low-light preprocessing and detection approaches using YOLO-family models, Detectron, and RetinaNet for challenging roadway footage.
+
+🎯 Multi-object tracking — Researched and evaluated DeepSORT and SORT approaches to address occlusion and fast-moving vehicles as part of the detection, classification, tracking, and counting pipeline.
+
+🖥️ Product engineering — Personally implemented the first operator interface in Tkinter and mentored development of the subsequent Kivy interface, helping turn model experiments into usable desktop software.
+
+⚙️ Practical delivery — Guided integration and runtime-quality trade-offs using Python, PyTorch, Keras, and TensorFlow to turn model experiments into usable desktop software.</div>
+    </section>
+    <div class="tools">
+      <button id="copy" type="button">Copy role description</button>
+      <span id="count"></span>
+      <span id="status" role="status" aria-live="polite"></span>
+    </div>
+    <section class="card" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills to associate with this role</h2>
+      <p>Python · Computer Vision · Object Detection · Multi-Object Tracking · Image Processing · Deep Learning · PyTorch · TensorFlow · Keras · YOLO · Detectron · RetinaNet · DeepSORT · SORT · Tkinter · Kivy · Dataset Annotation · Technical Leadership · Mentoring</p>
+    </section>
+    <section class="card" aria-labelledby="research-heading">
+      <h2 id="research-heading">Related research</h2>
+      <p>“Real-time Vehicle Detection, Classification &amp; Tracing Using State-Of-The-Art Dataset” · IEEE INCET · 2022</p>
+    </section>
+    <section class="card" id="media" aria-labelledby="media-heading">
+      <h2 id="media-heading">Suggested LinkedIn media</h2>
+      <p><strong>Related co-authored research:</strong> <a href="https://doi.org/10.1109/INCET54531.2022.9824516" target="_blank" rel="noopener noreferrer">Real-time Vehicle Detection, Classification &amp; Tracing Using State-Of-The-Art Dataset</a> · IEEE INCET 2022</p>
+      <p><strong>Title:</strong> Vehicle detection, classification and tracking — IEEE INCET 2022<br><strong>Caption:</strong> Co-authored research on vehicle detection, classification, and tracking, published at IEEE INCET in 2022.</p>
+    </section>
+  </main>
+  <script>
+    const text = document.getElementById("description").textContent.trim();
+    const status = document.getElementById("status");
+    const copyButton = document.getElementById("copy");
+    document.getElementById("count").textContent = `${text.length.toLocaleString()} characters`;
+
+    function copyFallback() {
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      field.setSelectionRange(0, field.value.length);
+      let copied = false;
+      try {
+        copied = document.execCommand("copy");
+      } finally {
+        field.remove();
+        copyButton.focus();
+      }
+      if (!copied) throw new Error("Copy unavailable");
+    }
+
+    copyButton.addEventListener("click", async () => {
+      status.textContent = "";
+      try {
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+            throw new Error("Clipboard unavailable");
+          }
+          await navigator.clipboard.writeText(text);
+        } catch {
+          copyFallback();
+        }
+        status.textContent = "Copied — ready to paste into LinkedIn.";
+      } catch {
+        status.textContent = "Copy was unavailable. Select the description above and copy it manually.";
+      }
+    });
+  </script>
+</body>
+</html>
