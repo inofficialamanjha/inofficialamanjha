@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinkedIn Banner Prompt | Aman Jha</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #f3f5f8; --card: #fff; --ink: #17283b; --muted: #526379; --line: #dce3eb; --accent: #0a66c2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; line-height: 1.65; }
+    main { max-width: 820px; margin: 40px auto; padding: 0 20px; }
+    h1 { margin-bottom: 8px; font-size: clamp(26px, 5vw, 36px); letter-spacing: -.03em; }
+    h2 { font-size: 19px; }
+    .subtitle, #status, #count { color: var(--muted); }
+    .card { margin: 24px 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 5vw, 40px); }
+    #description { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 17px; }
+    .tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    button { border: 0; border-radius: 9px; padding: 12px 20px; background: #0a66c2; color: white; font: inherit; font-weight: 650; cursor: pointer; }
+    button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+    #status, #count { font-size: 14px; }
+    a { color: var(--accent); overflow-wrap: anywhere; }
+    summary { cursor: pointer; font-weight: 650; }
+    code { overflow-wrap: anywhere; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #101923; --card: #182534; --ink: #edf3fa; --muted: #b6c4d5; --line: #33475e; --accent: #82bfff; } }
+    @media (max-width: 480px) { main { margin: 24px auto; } #description { font-size: 16px; } }
+    @media print { .tools, details { display: none; } body { background: white; color: black; } .card { border: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>LinkedIn Banner Prompt</h1>
+    <p class="subtitle">LinkedIn profile cover image · AI image-generation prompt</p>
+    <section class="card" aria-labelledby="size-heading">
+      <h2 id="size-heading">Banner size</h2>
+      <p><strong>Upload size:</strong> 1584 × 396 pixels (recommended by LinkedIn for personal profile cover images) · 4:1 aspect ratio</p>
+      <p><strong>File:</strong> JPG or PNG, under 8 MB</p>
+      <p><strong>Optional working master:</strong> 3168 × 792 pixels (2×, same 4:1 ratio) for editing; export and upload the final file at 1584 × 396.</p>
+      <p>Do not use the LinkedIn Pages (company) cover size for a personal profile — those are separate specifications.</p>
+    </section>
+    <section class="card" aria-label="Banner image prompt">
+      <div id="description">Wide panoramic LinkedIn profile cover banner, 4:1 landscape aspect ratio, final size 1584 × 396 pixels. A calm, premium, editorial abstract illustration for a backend and platform software engineer who works on distributed systems and agentic AI.
+
+Composition: a restrained network of fine, thin lines and small softly lit nodes, concentrated in the right third and upper area of the frame. Small clusters of nodes are linked by orderly, gently curving paths, and a few flow lines converge toward one calm coordinating node, suggesting reliable services working together and quiet orchestration. Keep the left side, and especially the bottom-left area, quiet and low in detail. Leave a wide, clean, uncluttered band of negative space across the center for optional text added later. Keep every meaningful element well away from the outer edges so cropping on different screens does not cut anything important.
+
+Palette: deep navy to dark slate-blue background with a subtle matte texture; soft cool grey and muted steel-blue linework; a single restrained warm amber accent on two or three nodes only.
+
+Style: minimal, geometric, softly dimensional vector illustration with fine linework, gentle diffused lighting and subtle depth. Clear contrast between lines and background but low visual noise overall — sophisticated, mature and understated, like the cover of a technical book or an architecture journal. Sharp, high resolution, clean edges.
+
+Do not include any text, letters, numbers, code, logos, brand marks, watermarks, people, faces, robots, brains, server racks, circuit-board patterns, holograms, neon sci-fi effects, lens flares or busy rainbow gradients.</div>
+    </section>
+    <div class="tools">
+      <button id="copy" type="button">Copy banner prompt</button>
+      <span id="count"></span>
+      <span id="status" role="status" aria-live="polite"></span>
+    </div>
+    <section class="card" aria-labelledby="negative-heading">
+      <h2 id="negative-heading">Optional negative prompt</h2>
+      <p>Use only if your tool has a separate negative-prompt field:</p>
+      <p><code>text, letters, typography, numbers, code, logos, watermark, signature, people, faces, hands, robot, humanoid, brain, server rack, circuit board, hologram, neon cyberpunk, glitch, lens flare, rainbow gradient, clutter, blurry, low resolution, distorted, objects cut off at edges</code></p>
+    </section>
+    <section class="card" aria-labelledby="overlay-heading">
+      <h2 id="overlay-heading">Optional text overlay (add manually)</h2>
+      <p>Add text in an editor after generating the art, not inside the AI prompt — image generators often misspell words.</p>
+      <p><strong>Line:</strong> Backend Systems · Distributed Platforms · Agentic AI</p>
+      <p><strong>Optional name line:</strong> Aman Jha</p>
+      <p>Place it in the empty center/right space, in one clean sans-serif typeface (white or light cool grey on the navy background). Keep it to one or two short lines.</p>
+    </section>
+    <section class="card" aria-labelledby="steps-heading">
+      <h2 id="steps-heading">Generate, resize and upload</h2>
+      <ol>
+        <li>Paste the prompt into your image tool. Choose a 4:1 (or the widest available landscape) ratio at the highest available resolution — many tools cannot output exactly 1584 × 396.</li>
+        <li>Crop to 4:1 first, then resize to 1584 × 396 with the aspect ratio locked (no stretching or distortion).</li>
+        <li>Add the optional text overlay, then export as JPG or PNG under 8 MB.</li>
+        <li>On LinkedIn: <strong>Me → View Profile →</strong> camera icon on the introduction section → upload, reposition if needed → <strong>Apply</strong>.</li>
+        <li>Preview on desktop and mobile. Your profile photo sits over the cover image, so check that nothing important is hidden behind it or cut off at the edges.</li>
+      </ol>
+      <p><strong>Layout guidance (not an official LinkedIn safe area):</strong> keep the lower-left quiet because the profile photo overlaps the cover image there on current layouts, keep key details away from all edges, and put any text in the center/right. LinkedIn notes the image's appearance changes with browser window size and screen resolution, and does not publish an exact pixel safe zone for profile covers.</p>
+      <p>Use only original artwork. Avoid employer logos, internal project names, metrics, or confidential work in the banner.</p>
+    </section>
+    <details class="card">
+      <summary>Public sources</summary>
+      <ul>
+        <li><a href="https://www.linkedin.com/help/linkedin/answer/a568217" target="_blank" rel="noopener noreferrer">LinkedIn Help — Add or change the cover image on your profile</a>: JPG or PNG, less than 8 MB, 1584 (w) × 396 (h) pixels recommended; cover appears behind the profile photo; appearance may change with browser window size and screen resolution.</li>
+        <li><a href="https://www.linkedin.com/help/linkedin/answer/a563309" target="_blank" rel="noopener noreferrer">LinkedIn Help — Image specifications for LinkedIn Pages</a>: company-page cover sizes differ (1512 × 256); its advice to keep key details away from edges and in the center was written for Pages and is applied here only as general guidance.</li>
+        <li><a href="https://helpx.adobe.com/firefly/web/work-with-images/generate-images/writing-effective-text-prompts.html" target="_blank" rel="noopener noreferrer">Adobe Firefly — Writing effective text prompts</a>: be specific with subject, descriptors and keywords; be descriptive; add style, lighting and feeling.</li>
+        <li><a href="https://www.adobe.com/express/create/banner/linkedin" target="_blank" rel="noopener noreferrer">Adobe Express — LinkedIn banner</a>: recommends a clean, easy-to-understand design. (It lists a different personal size, 1536 × 396; LinkedIn's own Help figure of 1584 × 396 is used here.)</li>
+      </ul>
+    </details>
+  </main>
+  <script>
+    const text = document.getElementById("description").textContent.trim();
+    const status = document.getElementById("status");
+    document.getElementById("count").textContent = `${text.length.toLocaleString()} characters`;
+    function copyFallback() {
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      let copied = false;
+      try { copied = document.execCommand("copy"); }
+      finally { field.remove(); document.getElementById("copy").focus(); }
+      if (!copied) throw new Error("Copy unavailable");
+    }
+    document.getElementById("copy").addEventListener("click", async () => {
+      try {
+        try {
+          if (!navigator.clipboard) throw new Error("Clipboard unavailable");
+          await navigator.clipboard.writeText(text);
+        } catch { copyFallback(); }
+        status.textContent = "Copied — ready to paste into your image tool.";
+      } catch { status.textContent = "Select the prompt above and copy it manually."; }
+    });
+  </script>
+</body>
+</html>
